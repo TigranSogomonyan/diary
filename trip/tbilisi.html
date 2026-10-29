@@ -1,0 +1,77 @@
+<!doctype html><html lang="ru"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Тбилиси · Дневник</title>
+<script>
+(function(){var M='auto';try{M=localStorage.getItem('site-theme')||'auto'}catch(e){}
+window.__theme={mode:M,apply:function(){var h=new Date().getHours(),t=this.mode==='auto'?((h>=5&&h<18)?'light':'dark'):this.mode;document.documentElement.setAttribute('data-theme',t)}};
+__theme.apply();setInterval(function(){__theme.apply()},60000)})();
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Instrument+Serif:ital@0;1&family=Onest:wght@400;500;600&family=Noto+Serif+Georgian:wght@400;600&family=Noto+Serif+Armenian:wght@400;600&display=swap">
+<style>
+:root{--paper:#ECEFEB;--ink:#161A18;--muted:#5B6560;--line:#CDD3CE;--card:#F7F8F6;--accent:#A3203A;--cover:#E1E6E1;
+--f-display:'Instrument Serif',Georgia,serif;--f-body:'Onest',system-ui,sans-serif;--f-mono:'IBM Plex Mono',ui-monospace,monospace;--f-arm:'Noto Serif Armenian',serif;--f-geo:'Noto Serif Georgian',serif}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--paper:#120D0C;--ink:#EDE4E0;--muted:#A08D88;--line:#33282A;--card:#1C1513;--accent:#E8475F;--cover:#1C1513;color-scheme:dark}}
+:root[data-theme="dark"]{--paper:#120D0C;--ink:#EDE4E0;--muted:#A08D88;--line:#33282A;--card:#1C1513;--accent:#E8475F;--cover:#1C1513;color-scheme:dark}
+*{box-sizing:border-box}html,body{margin:0}
+body{background:var(--paper);color:var(--ink);font:400 16px/1.5 var(--f-body);padding:0 16px;overflow-x:hidden}
+img{display:block;max-width:100%}
+button{font:inherit;color:inherit;cursor:pointer}
+a{color:inherit}
+.fw{max-width:1180px;margin:0 auto;width:100%}
+.mono{font:400 12px/1.4 var(--f-mono);letter-spacing:.04em;color:var(--muted)}
+.bw{filter:grayscale(1) contrast(1.08)}
+.top{display:flex;justify-content:space-between;align-items:baseline;gap:16px;padding:18px 0;border-bottom:1px solid var(--line);flex-wrap:wrap}
+.top .name{font:400 22px/1 var(--f-display)}
+.top nav{display:flex;gap:18px;flex-wrap:wrap}
+.top nav a{font:400 12px var(--f-mono);letter-spacing:.06em;text-transform:uppercase;text-decoration:none;color:var(--muted)}
+.top nav a:hover{color:var(--ink)}
+.top .other{font:400 12px var(--f-mono);text-decoration:none;border-bottom:1px solid var(--accent);color:var(--ink)}
+.btn{display:inline-flex;align-items:center;gap:10px;margin-top:26px;min-height:42px;padding:0 18px;border:1.5px solid var(--ink);border-radius:999px;background:transparent;font:500 14px var(--f-body)}
+.btn:hover{background:var(--ink);color:var(--paper)}
+.sec{padding:64px 0;border-top:1px solid var(--line)}
+.sec-h{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:12px;align-items:end;margin-bottom:28px}
+.sec-h h2{margin:0;font:400 clamp(40px,6vw,72px)/.95 var(--f-display)}
+.sec-h p{margin:8px 0 0;max-width:52ch;color:var(--muted)}
+.chapter{display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr);gap:32px;padding:40px 0;border-top:1px dashed var(--line)}
+.chapter:first-of-type{border-top:0;padding-top:0}
+.opener{position:relative;display:flex;flex-direction:column;justify-content:space-between;min-height:420px;padding:22px;background:var(--ink);color:var(--paper)}
+.opener .glyph{font:400 clamp(140px,18vw,240px)/.8 var(--f-arm);color:var(--accent)}
+.opener.geo .glyph{font-family:var(--f-geo)}
+.opener h3{margin:0;font:400 46px/1 var(--f-display)}
+.opener .mono{color:inherit;opacity:.7}
+.pair{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.pair figure{margin:0}.pair img,.thing img,.hero figure img{height:auto}
+.pair img{width:100%;aspect-ratio:16/9;object-fit:cover}
+.pair figcaption{margin-top:6px}
+.words{position:relative;margin-top:10px;overflow:hidden;aspect-ratio:16/9;background:#000}
+.words::before{content:"";position:absolute;inset:-30px;background:var(--bg,#000) center/cover;filter:blur(26px) brightness(.5)}.words img{position:absolute;inset:0;width:100%;height:100%;object-fit:contain;opacity:0;transition:opacity .8s}
+.words img.on{opacity:1}
+.words p{position:absolute;left:0;right:0;top:50%;transform:translateY(-50%);margin:0;text-align:center;color:#fff;font:400 15px/1.3 var(--f-body);letter-spacing:.02em;text-shadow:0 1px 10px rgba(0,0,0,.5)}
+.words p i{font:italic 400 22px var(--f-display)}
+.words .ctl{position:absolute;bottom:10px;left:12px;right:12px;display:flex;justify-content:space-between;color:#fff;font:400 11px var(--f-mono)}
+.words .ctl button{background:none;border:1px solid rgba(255,255,255,.6);border-radius:999px;padding:4px 10px;color:#fff}
+.slot{display:grid;place-items:center;min-height:240px;border:1px dashed var(--line);color:var(--muted);font:400 13px var(--f-mono);text-align:center;padding:16px}
+.tgrid{display:grid;grid-template-columns:repeat(var(--cols,3),minmax(0,1fr));gap:3px;columns:auto;margin-left:calc(50% - 50vw);margin-right:calc(50% - 50vw)}
+.tgrid[hidden]{display:none}
+@media (max-width:760px){.chapter{grid-template-columns:minmax(0,1fr)}.opener{min-height:300px}.tgrid{--cols:2}}
+.top .name{text-decoration:none}.trip{border-top:0;padding-top:32px}.trip .tmap{margin:0 0 10px}
+</style><link rel="stylesheet" href="../frames.css"></head><body>
+<div class="fw">
+<header class="top">
+  <a class="name" href="../index.html#trips">← Дневник</a>
+  <span class="mono">Глава II · октябрь 2026</span>
+  <a class="other" href="https://tigransogomonyan.github.io/portfolio/" target="_blank" rel="noopener">Портфолио →</a>
+</header>
+<section class="sec trip">
+  <article class="chapter">
+    <div class="opener geo"><span class="mono">Глава II · октябрь 2026</span><span class="glyph" aria-hidden="true">თ</span><div><h3>Tbilisí</h3><span class="mono">Тбилиси · кадры загружаются</span></div></div>
+    <div>
+      <figure class="tmap"><svg viewBox="0 0 600 300" role="img" aria-label="Карта: Тбилиси"><g style="stroke:var(--line);stroke-width:1"><line x1="121" y1="0" x2="121" y2="300"/><line x1="233" y1="0" x2="233" y2="300"/><line x1="345" y1="0" x2="345" y2="300"/><line x1="457" y1="0" x2="457" y2="300"/><line x1="0" y1="210" x2="600" y2="210"/><line x1="0" y1="60" x2="600" y2="60"/></g><circle cx="298" cy="144" r="4" style="fill:var(--ink)"/><text x="308" y="148" text-anchor="start" style="fill:var(--ink);font:400 13px var(--f-mono)">Тбилиси</text><g style="stroke:var(--muted);fill:var(--muted);font:400 11px var(--f-mono)"><line x1="16" y1="284" x2="151" y2="284" style="stroke-width:1.5"/><text x="16" y="276" style="stroke:none">50 км</text><text x="584" y="24" text-anchor="end" style="stroke:none">N ↑</text></g></svg><figcaption class="mono">Маршрут: Тбилиси</figcaption></figure>
+      <div class="slot">Сюда встанут пары «что вижу / что снимаю» из Грузии.<br>Пришли фото, и я соберу главу.</div>
+    </div>
+  </article>
+</section>
+
+<footer class="sec"><a class="btn" href="../index.html#trips">← Все поездки</a></footer>
+</div>
+<script src="../frames.js"></script>
+</body></html>
