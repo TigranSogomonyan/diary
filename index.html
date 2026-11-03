@@ -8,9 +8,22 @@
 <meta name="twitter:card" content="summary_large_image"><meta name="twitter:image" content="https://tigransogomonyan.github.io/diary/f/10.webp">
 <link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2032%2032%22%3E%3Ccircle%20cx%3D%2216%22%20cy%3D%2216%22%20r%3D%2212%22%20fill%3D%22%23A3203A%22%2F%3E%3C%2Fsvg%3E"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Тигран · Дневник</title>
 <script>
-(function(){var M='auto';try{M=localStorage.getItem('site-theme')||'auto'}catch(e){}
-window.__theme={mode:M,apply:function(){var h=new Date().getHours(),t=this.mode==='auto'?((h>=5&&h<18)?'light':'dark'):this.mode;document.documentElement.setAttribute('data-theme',t)}};
-__theme.apply();setInterval(function(){__theme.apply()},60000)})();
+(function(){
+  var mode='auto';
+  try{mode=localStorage.getItem('site-theme')||'auto'}catch(e){}
+  if(mode!=='light'&&mode!=='dark')mode='auto';
+  var prefersDark=window.matchMedia?window.matchMedia('(prefers-color-scheme: dark)'):null;
+  window.__theme={mode:mode,apply:function(){
+    var dark=this.mode==='dark'||(this.mode==='auto'&&prefersDark&&prefersDark.matches);
+    document.documentElement.setAttribute('data-theme',dark?'dark':'light');
+  }};
+  window.__theme.apply();
+  if(prefersDark){
+    var onChange=function(){if(window.__theme.mode==='auto')window.__theme.apply()};
+    if(prefersDark.addEventListener)prefersDark.addEventListener('change',onChange);
+    else if(prefersDark.addListener)prefersDark.addListener(onChange);
+  }
+})();
 </script>
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Instrument+Serif:ital@0;1&family=Onest:wght@400;500;600&family=Noto+Serif+Georgian:wght@400;600&family=Noto+Serif+Armenian:wght@400;600&display=swap">
@@ -608,4 +621,5 @@ B.forEach(function(b){b.onclick=function(){set(b.dataset.d);try{localStorage.set
 </script>
 <script src="frames.js"></script>
 <script src="improvements.js"></script>
+<script src="site-controls.js"></script>
 </body></html>
