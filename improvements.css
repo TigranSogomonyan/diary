@@ -88,3 +88,27 @@
   .diary-home .tg-editorial{min-height:0;border-left:0;border-top:1px solid var(--line);padding:24px 0 0}
   .diary-home .tg-quote{font-size:clamp(30px,9vw,46px)}
 }
+
+/* Shared masthead utilities: a tactile but unobtrusive journal control. */
+.top-actions{display:flex;align-items:center;gap:clamp(10px,1.5vw,18px);margin-left:auto}
+.top-actions .other{white-space:nowrap}
+.theme-toggle{
+  flex:0 0 auto;display:grid;place-items:center;width:36px;height:36px;padding:0;
+  border:1px solid var(--line);border-radius:50%;background:transparent;color:var(--ink);
+  font:400 21px/1 var(--f-display);cursor:pointer;
+  transition:background .2s ease,border-color .2s ease;
+}
+.theme-toggle:hover{border-color:var(--ink);background:var(--card)}
+.theme-toggle:focus-visible{outline:2px solid var(--accent);outline-offset:4px}
+.reading-progress{position:fixed;inset:0 0 auto;z-index:70;height:2px;pointer-events:none}
+.reading-progress>span{
+  display:block;width:100%;height:100%;background:var(--accent);
+  transform:scaleX(0);transform-origin:left center;will-change:transform;
+}
+@media(max-width:760px){
+  .diary-home .top .top-actions{grid-column:2;grid-row:1;margin:0;justify-self:end;gap:8px}
+  .diary-home .top .top-actions .other{grid-row:auto;grid-column:auto;font-size:10px}
+  .top-actions{gap:9px}
+  .theme-toggle{width:34px;height:34px;font-size:20px}
+}
+@media(prefers-reduced-motion:reduce){.theme-toggle{transition:none}}
