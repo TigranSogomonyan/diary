@@ -65,7 +65,6 @@ if(board){
   document.querySelectorAll('#board .filters button').forEach(function(b){b.addEventListener('click',syncPins)});
   syncPins();
 }
-}
 /* Highlight the section currently being read without changing scroll position. */
 var navLinks=Array.prototype.slice.call(document.querySelectorAll('.diary-home .top nav a[href^="#"]'));
 if(navLinks.length){
