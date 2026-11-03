@@ -27,3 +27,6 @@
   .skip-link,.diary-home .top nav a{transition:none!important}
   .diary-home .top nav{scroll-behavior:auto}
 }
+
+/* Incomplete chapters remain public without internal production notes. */
+.slot.upcoming{display:grid;place-items:end start;min-height:260px;padding:clamp(24px,4vw,42px);border:1px solid var(--line);background:var(--card);color:var(--ink);font:italic 400 clamp(24px,3vw,38px)/1.15 var(--f-display);text-align:left}
