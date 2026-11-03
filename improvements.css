@@ -30,3 +30,61 @@
 
 /* Incomplete chapters remain public without internal production notes. */
 .slot.upcoming{display:grid;place-items:end start;min-height:260px;padding:clamp(24px,4vw,42px);border:1px solid var(--line);background:var(--card);color:var(--ink);font:italic 400 clamp(24px,3vw,38px)/1.15 var(--f-display);text-align:left}
+
+/* Volume II — quieter editorial hierarchy and intentional empty states. */
+.diary-home .top{
+  position:sticky;top:0;z-index:60;background:var(--paper);
+  margin-inline:-16px;padding-inline:16px;border-bottom:1px solid var(--line)
+}
+.diary-home section[id]{scroll-margin-top:100px}
+.diary-home .top nav a[aria-current="location"]{
+  color:var(--ink);text-decoration:underline;text-decoration-color:var(--accent);
+  text-underline-offset:8px;text-decoration-thickness:1px
+}
+.diary-home .hero{padding-block:clamp(48px,7vw,96px);gap:clamp(24px,4vw,56px)}
+.diary-home .hero>div{align-self:center}
+.diary-home .hero>div>.mono:first-child{letter-spacing:.13em;text-transform:uppercase}
+.diary-home .hero h1{font-size:clamp(78px,13.5vw,176px);letter-spacing:-.045em}
+.diary-home .hero .lead{max-width:28ch}
+.diary-home .hero .meta{border-top:1px solid var(--line);padding-top:14px}
+.diary-home .hero figure img{aspect-ratio:3/4;object-position:center}
+.diary-home .hero figcaption{border-top:1px solid var(--line);padding-top:8px}
+.diary-home .hero .btn{border-radius:0}
+.diary-home .sec-h h2{letter-spacing:-.035em}
+.diary-home .car-card .ph{background:var(--cover)}
+.diary-home .car-card:focus-visible .ph{outline:2px solid var(--accent);outline-offset:-3px}
+.diary-home .car-ctl button:disabled{opacity:.28;cursor:not-allowed}
+.diary-home .car-ctl button:disabled:hover{background:none;color:inherit}
+.diary-home .zine.empty{cursor:default;background:transparent;color:var(--muted)}
+.diary-home .zine.empty:hover{transform:none;box-shadow:none}
+.diary-home .zine.empty .ph{background:transparent;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.diary-home .zine.empty .ph span{
+  background:none;color:var(--muted);font:italic 400 clamp(20px,2.5vw,32px)/1 var(--f-display);
+  letter-spacing:-.02em;transform:rotate(-6deg)
+}
+.diary-home .tg{
+  grid-template-columns:minmax(0,1fr) minmax(0,1.2fr);
+  align-items:stretch;gap:clamp(28px,4vw,56px);padding:clamp(24px,4vw,48px)
+}
+.diary-home .tg-head{grid-template-columns:auto minmax(0,1fr);align-content:start}
+.diary-home .tg-head .tg-go{grid-column:1/-1;justify-self:start;margin-top:14px}
+.diary-home .tg-editorial{
+  min-height:200px;border-left:1px solid var(--line);
+  padding-left:clamp(22px,3vw,48px);display:flex;flex-direction:column;
+  justify-content:space-between;gap:24px
+}
+.diary-home .tg-quote{
+  margin:0;max-width:19ch;font:italic 400 clamp(30px,3.9vw,52px)/1.04 var(--f-display);
+  letter-spacing:-.026em;color:var(--ink)
+}
+@media(max-width:760px){
+  .diary-home section[id]{scroll-margin-top:145px}
+  .diary-home .top .name{line-height:1.1}
+  .diary-home .hero{padding-top:40px;padding-bottom:52px}
+  .diary-home .hero h1{font-size:clamp(82px,20vw,122px)}
+  .diary-home .hero .lead{font-size:clamp(21px,5.4vw,28px)}
+  .diary-home .hero figure img{aspect-ratio:4/5}
+  .diary-home .tg{grid-template-columns:1fr}
+  .diary-home .tg-editorial{min-height:0;border-left:0;border-top:1px solid var(--line);padding:24px 0 0}
+  .diary-home .tg-quote{font-size:clamp(30px,9vw,46px)}
+}
