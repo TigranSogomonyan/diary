@@ -4,14 +4,31 @@
 <meta name="description" content="Глава I · июнь 2026. Ереван, Гарни, Татев · 12 дней.">
 <meta name="theme-color" content="#ECEFEB" media="(prefers-color-scheme: light)"><meta name="theme-color" content="#120D0C" media="(prefers-color-scheme: dark)">
 <meta property="og:type" content="website"><meta property="og:locale" content="ru_RU"><meta property="og:title" content="Ереван · Дневник"><meta property="og:description" content="Глава I · июнь 2026. Ереван, Гарни, Татев · 12 дней."><meta property="og:url" content="https://tigransogomonyan.github.io/diary/trip/yerevan.html">
+<meta property="og:image" content="https://tigransogomonyan.github.io/diary/f/10.webp"><meta property="og:image:alt" content="Каскадный сад · Ереван, июнь 2026"><meta name="twitter:card" content="summary_large_image">
 <link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2032%2032%22%3E%3Ccircle%20cx%3D%2216%22%20cy%3D%2216%22%20r%3D%2212%22%20fill%3D%22%23A3203A%22%2F%3E%3C%2Fsvg%3E"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Ереван · Дневник</title>
 <script>
-(function(){var M='auto';try{M=localStorage.getItem('site-theme')||'auto'}catch(e){}
-window.__theme={mode:M,apply:function(){var h=new Date().getHours(),t=this.mode==='auto'?((h>=5&&h<18)?'light':'dark'):this.mode;document.documentElement.setAttribute('data-theme',t)}};
-__theme.apply();setInterval(function(){__theme.apply()},60000)})();
+(function(){
+  var mode='auto';
+  try{mode=localStorage.getItem('site-theme')||'auto'}catch(e){}
+  if(mode!=='light'&&mode!=='dark')mode='auto';
+  var prefersDark=window.matchMedia?window.matchMedia('(prefers-color-scheme: dark)'):null;
+  window.__theme={mode:mode,apply:function(){
+    var dark=this.mode==='dark'||(this.mode==='auto'&&prefersDark&&prefersDark.matches);
+    document.documentElement.setAttribute('data-theme',dark?'dark':'light');
+  }};
+  window.__theme.apply();
+  if(prefersDark){
+    var onChange=function(){if(window.__theme.mode==='auto')window.__theme.apply()};
+    if(prefersDark.addEventListener)prefersDark.addEventListener('change',onChange);
+    else if(prefersDark.addListener)prefersDark.addListener(onChange);
+  }
+})();
 </script>
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Instrument+Serif:ital@0;1&family=Onest:wght@400;500;600&family=Noto+Serif+Georgian:wght@400;600&family=Noto+Serif+Armenian:wght@400;600&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Instrument+Serif:ital@0;1&family=Onest:wght@400;500;600&display=swap">
+<!-- shortcut: Noto subsets contain chapter initials only; expand text= when adding glyphs. -->
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Serif+Armenian:wght@400&text=%D4%B5&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Serif+Georgian:wght@400&text=%E1%83%97&display=swap">
 <style>
 :root{--paper:#ECEFEB;--ink:#161A18;--muted:#5B6560;--line:#CDD3CE;--card:#F7F8F6;--accent:#A3203A;--cover:#E1E6E1;
 --f-display:'Instrument Serif',Georgia,serif;--f-body:'Onest',system-ui,sans-serif;--f-mono:'IBM Plex Mono',ui-monospace,monospace;--f-arm:'Noto Serif Armenian',serif;--f-geo:'Noto Serif Georgian',serif}
@@ -60,13 +77,15 @@ a{color:inherit}
 .tgrid[hidden]{display:none}
 @media (max-width:760px){.chapter{grid-template-columns:minmax(0,1fr)}.opener{min-height:300px}.tgrid{--cols:2}}
 .top .name{text-decoration:none}.trip{border-top:0;padding-top:32px}.trip .tmap{margin:0 0 10px}
-</style><link rel="stylesheet" href="../frames.css"></head><body>
+</style><link rel="stylesheet" href="../frames.css"><link rel="stylesheet" href="../improvements.css"></head><body>
+<a class="skip-link" href="#main-content">Перейти к содержанию</a>
 <div class="fw">
 <header class="top">
   <a class="name" href="../index.html#trips">← Дневник</a>
   <span class="mono">Глава I · июнь 2026</span>
   <a class="other" href="https://tigransogomonyan.github.io/portfolio/" target="_blank" rel="noopener">Портфолио →</a>
 </header>
+<main id="main-content" tabindex="-1">
 <section class="sec trip">
   <article class="chapter">
     <div class="opener"><span class="mono">Глава I · июнь 2026</span><span class="glyph" aria-hidden="true">Ե</span><div><h1>Երևան</h1><span class="mono">Ереван, Гарни, Татев · 12 дней</span></div></div>
@@ -88,9 +107,11 @@ a{color:inherit}
   <div class="sec-h"><div><h2>Все кадры</h2></div><span class="mono">18 кадров</span></div>
   <div class="tgrid"><figure><img loading="lazy" decoding="async" src="../f/01.webp" alt="Над Кавказом"><figcaption><b>Над Кавказом</b><span class="mono">перелёт · июнь</span></figcaption></figure><figure><img loading="lazy" decoding="async" src="../f/10.webp" alt="Каскад"><figcaption><b>Каскад</b><span class="mono">Ереван · июнь</span></figcaption></figure><figure><img loading="lazy" decoding="async" src="../f/11.webp" alt="Тот же сад"><figcaption><b>Тот же сад</b><span class="mono">Ереван · июнь</span></figcaption></figure><figure><img loading="lazy" decoding="async" src="../f/02.webp" alt="Ночной город"><figcaption><b>Ночной город</b><span class="mono">Ереван · июнь</span></figcaption></figure><figure><img loading="lazy" decoding="async" src="../f/a05.webp" alt="Дверь"><figcaption><b>Дверь</b><span class="mono">Ереван · июнь</span></figcaption></figure><figure><img loading="lazy" decoding="async" src="../f/a02.webp" alt="Статуя"><figcaption><b>Статуя</b><span class="mono">Ереван · июнь</span></figcaption></figure><figure><img loading="lazy" decoding="async" src="../f/03.webp" alt="Пакет"><figcaption><b>Пакет</b><span class="mono">Ереван · июнь</span></figcaption></figure><figure><img loading="lazy" decoding="async" src="../f/04.webp" alt="Ужин"><figcaption><b>Ужин</b><span class="mono">отель · июнь</span></figcaption></figure><figure><img loading="lazy" decoding="async" src="../f/05.webp" alt="Табличка"><figcaption><b>Табличка</b><span class="mono">улица · июнь</span></figcaption></figure><figure><img loading="lazy" decoding="async" src="../f/07.webp" alt="Улица"><figcaption><b>Улица</b><span class="mono">канатная дорога · июнь</span></figcaption></figure><figure><img loading="lazy" decoding="async" src="../f/13.webp" alt="Роспись"><figcaption><b>Роспись</b><span class="mono">улица · июнь</span></figcaption></figure><figure><img loading="lazy" decoding="async" src="../f/a06.webp" alt="Гарни"><figcaption><b>Гарни</b><span class="mono">Армения · июнь</span></figcaption></figure><figure><img loading="lazy" decoding="async" src="../f/a08.webp" alt="Севанаванк"><figcaption><b>Севанаванк</b><span class="mono">Армения · июнь</span></figcaption></figure><figure><img loading="lazy" decoding="async" src="../f/a09.webp" alt="Хачкар"><figcaption><b>Хачкар</b><span class="mono">Армения · июнь</span></figcaption></figure><figure><img loading="lazy" decoding="async" src="../f/06.webp" alt="Фреска"><figcaption><b>Фреска</b><span class="mono">Армения · июнь</span></figcaption></figure><figure><img loading="lazy" decoding="async" src="../f/a04.webp" alt="Монах"><figcaption><b>Монах</b><span class="mono">Армения · июнь</span></figcaption></figure><figure><img loading="lazy" decoding="async" src="../f/08.webp" alt="Вино"><figcaption><b>Вино</b><span class="mono">Армения · июнь</span></figcaption></figure><figure><img loading="lazy" decoding="async" src="../f/09.webp" alt="Застолье"><figcaption><b>Застолье</b><span class="mono">Армения · июнь</span></figcaption></figure></div>
 </section>
+</main>
 <footer class="sec"><a class="btn" href="../index.html#trips">← Все поездки</a></footer>
 </div>
-<script src="../frames.js"></script>
+<script src="../frames.js" defer></script>
+<script src="../site-controls.js" defer></script>
 <script>
 (function(){var W=['Горы хотят <i>тишины</i>.','Камень хочет <i>памяти</i>.','Дорога хочет <i>спутника</i>.','Дом хочет <i>возвращения</i>.'],wi=0,wb=document.getElementById('words'),wimg=wb.querySelectorAll('img'),wp=wb.querySelector('p');
 function wset(){wimg.forEach(function(im,k){im.classList.toggle('on',k===wi);if(k===wi)wb.style.setProperty('--bg','url('+im.src+')')});wp.innerHTML=W[wi];document.getElementById('wn').textContent=(wi+1)+' / '+W.length}

@@ -1,17 +1,33 @@
 <!doctype html><html lang="ru"><head><meta charset="utf-8">
 <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data:; media-src 'self'; connect-src 'none'; frame-src 'none'; object-src 'none'; base-uri 'none'; form-action 'none'; upgrade-insecure-requests">
 <meta name="referrer" content="strict-origin-when-cross-origin">
-<meta name="description" content="Глава II · октябрь 2026. Тбилиси.">
+<meta name="description" content="Фотодневник Тиграна Согомоняна. Глава II · Тбилиси, октябрь 2026. Материал готовится.">
 <meta name="theme-color" content="#ECEFEB" media="(prefers-color-scheme: light)"><meta name="theme-color" content="#120D0C" media="(prefers-color-scheme: dark)">
 <meta property="og:type" content="website"><meta property="og:locale" content="ru_RU"><meta property="og:title" content="Тбилиси · Дневник"><meta property="og:description" content="Глава II · октябрь 2026. Тбилиси."><meta property="og:url" content="https://tigransogomonyan.github.io/diary/trip/tbilisi.html">
 <link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2032%2032%22%3E%3Ccircle%20cx%3D%2216%22%20cy%3D%2216%22%20r%3D%2212%22%20fill%3D%22%23A3203A%22%2F%3E%3C%2Fsvg%3E"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Тбилиси · Дневник</title>
 <script>
-(function(){var M='auto';try{M=localStorage.getItem('site-theme')||'auto'}catch(e){}
-window.__theme={mode:M,apply:function(){var h=new Date().getHours(),t=this.mode==='auto'?((h>=5&&h<18)?'light':'dark'):this.mode;document.documentElement.setAttribute('data-theme',t)}};
-__theme.apply();setInterval(function(){__theme.apply()},60000)})();
+(function(){
+  var mode='auto';
+  try{mode=localStorage.getItem('site-theme')||'auto'}catch(e){}
+  if(mode!=='light'&&mode!=='dark')mode='auto';
+  var prefersDark=window.matchMedia?window.matchMedia('(prefers-color-scheme: dark)'):null;
+  window.__theme={mode:mode,apply:function(){
+    var dark=this.mode==='dark'||(this.mode==='auto'&&prefersDark&&prefersDark.matches);
+    document.documentElement.setAttribute('data-theme',dark?'dark':'light');
+  }};
+  window.__theme.apply();
+  if(prefersDark){
+    var onChange=function(){if(window.__theme.mode==='auto')window.__theme.apply()};
+    if(prefersDark.addEventListener)prefersDark.addEventListener('change',onChange);
+    else if(prefersDark.addListener)prefersDark.addListener(onChange);
+  }
+})();
 </script>
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Instrument+Serif:ital@0;1&family=Onest:wght@400;500;600&family=Noto+Serif+Georgian:wght@400;600&family=Noto+Serif+Armenian:wght@400;600&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Instrument+Serif:ital@0;1&family=Onest:wght@400;500;600&display=swap">
+<!-- shortcut: Noto subsets contain chapter initials only; expand text= when adding glyphs. -->
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Serif+Armenian:wght@400&text=%D4%B5&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Serif+Georgian:wght@400&text=%E1%83%97&display=swap">
 <style>
 :root{--paper:#ECEFEB;--ink:#161A18;--muted:#5B6560;--line:#CDD3CE;--card:#F7F8F6;--accent:#A3203A;--cover:#E1E6E1;
 --f-display:'Instrument Serif',Georgia,serif;--f-body:'Onest',system-ui,sans-serif;--f-mono:'IBM Plex Mono',ui-monospace,monospace;--f-arm:'Noto Serif Armenian',serif;--f-geo:'Noto Serif Georgian',serif}
@@ -60,24 +76,28 @@ a{color:inherit}
 .tgrid[hidden]{display:none}
 @media (max-width:760px){.chapter{grid-template-columns:minmax(0,1fr)}.opener{min-height:300px}.tgrid{--cols:2}}
 .top .name{text-decoration:none}.trip{border-top:0;padding-top:32px}.trip .tmap{margin:0 0 10px}
-</style><link rel="stylesheet" href="../frames.css"></head><body>
+</style><link rel="stylesheet" href="../frames.css"><link rel="stylesheet" href="../improvements.css"></head><body>
+<a class="skip-link" href="#main-content">Перейти к содержанию</a>
 <div class="fw">
 <header class="top">
   <a class="name" href="../index.html#trips">← Дневник</a>
   <span class="mono">Глава II · октябрь 2026</span>
   <a class="other" href="https://tigransogomonyan.github.io/portfolio/" target="_blank" rel="noopener">Портфолио →</a>
 </header>
+<main id="main-content" tabindex="-1">
 <section class="sec trip">
   <article class="chapter">
-    <div class="opener geo"><span class="mono">Глава II · октябрь 2026</span><span class="glyph" aria-hidden="true">თ</span><div><h1>Tbilisí</h1><span class="mono">Тбилиси · кадры загружаются</span></div></div>
+    <div class="opener geo"><span class="mono">Глава II · октябрь 2026</span><span class="glyph" aria-hidden="true">თ</span><div><h1>Tbilisí</h1><span class="mono">Тбилиси · глава в работе</span></div></div>
     <div>
-      <figure class="tmap"><svg viewBox="0 0 600 300" role="img" aria-label="Карта: Тбилиси"><g style="stroke:var(--line);stroke-width:1"><line x1="121" y1="0" x2="121" y2="300"/><line x1="233" y1="0" x2="233" y2="300"/><line x1="345" y1="0" x2="345" y2="300"/><line x1="457" y1="0" x2="457" y2="300"/><line x1="0" y1="210" x2="600" y2="210"/><line x1="0" y1="60" x2="600" y2="60"/></g><circle cx="298" cy="144" r="4" style="fill:var(--ink)"/><text x="308" y="148" text-anchor="start" style="fill:var(--ink);font:400 13px var(--f-mono)">Тбилиси</text><g style="stroke:var(--muted);fill:var(--muted);font:400 11px var(--f-mono)"><line x1="16" y1="284" x2="151" y2="284" style="stroke-width:1.5"/><text x="16" y="276" style="stroke:none">50 км</text><text x="584" y="24" text-anchor="end" style="stroke:none">N ↑</text></g></svg><figcaption class="mono">Маршрут: Тбилиси</figcaption></figure>
-      <div class="slot">Сюда встанут пары «что вижу / что снимаю» из Грузии.<br>Пришли фото, и я соберу главу.</div>
+      <figure class="tmap"><svg viewBox="0 0 600 300" role="img" aria-label="Карта: Тбилиси"><g style="stroke:var(--line);stroke-width:1"><line x1="121" y1="0" x2="121" y2="300"/><line x1="233" y1="0" x2="233" y2="300"/><line x1="345" y1="0" x2="345" y2="300"/><line x1="457" y1="0" x2="457" y2="300"/><line x1="0" y1="210" x2="600" y2="210"/><line x1="0" y1="60" x2="600" y2="60"/></g><circle cx="298" cy="144" r="4" style="fill:var(--ink)"/><text x="308" y="148" text-anchor="start" style="fill:var(--ink);font:400 13px var(--f-mono)">Тбилиси</text><g style="stroke:var(--muted);fill:var(--muted);font:400 11px var(--f-mono)"><line x1="16" y1="284" x2="151" y2="284" style="stroke-width:1.5"/><text x="16" y="276" style="stroke:none">схема</text><text x="584" y="24" text-anchor="end" style="stroke:none">N ↑</text></g></svg><figcaption class="mono">Схема · Тбилиси (без масштаба)</figcaption></figure>
+      <div class="slot upcoming">Глава о Тбилиси готовится к публикации. Здесь появятся фотографии и заметки поездки.</div>
     </div>
   </article>
 </section>
 
+</main>
 <footer class="sec"><a class="btn" href="../index.html#trips">← Все поездки</a></footer>
 </div>
-<script src="../frames.js"></script>
+<script src="../frames.js" defer></script>
+<script src="../site-controls.js" defer></script>
 </body></html>

@@ -1,0 +1,231 @@
+{
+  "light": [
+    {
+      "client": 305,
+      "scroll": 305,
+      "theme": "light",
+      "title": "Тигран · Дневник",
+      "width": 320
+    },
+    {
+      "client": 305,
+      "scroll": 305,
+      "theme": "light",
+      "title": "Ереван · Дневник",
+      "width": 320
+    },
+    {
+      "client": 305,
+      "scroll": 305,
+      "theme": "light",
+      "title": "Тбилиси · Дневник",
+      "width": 320
+    },
+    {
+      "client": 375,
+      "scroll": 375,
+      "theme": "light",
+      "title": "Тигран · Дневник",
+      "width": 390
+    },
+    {
+      "client": 375,
+      "scroll": 375,
+      "theme": "light",
+      "title": "Ереван · Дневник",
+      "width": 390
+    },
+    {
+      "client": 375,
+      "scroll": 375,
+      "theme": "light",
+      "title": "Тбилиси · Дневник",
+      "width": 390
+    },
+    {
+      "client": 753,
+      "scroll": 753,
+      "theme": "light",
+      "title": "Тигран · Дневник",
+      "width": 768
+    },
+    {
+      "client": 753,
+      "scroll": 753,
+      "theme": "light",
+      "title": "Ереван · Дневник",
+      "width": 768
+    },
+    {
+      "client": 768,
+      "scroll": 753,
+      "theme": "light",
+      "title": "Тбилиси · Дневник",
+      "width": 768
+    },
+    {
+      "client": 1009,
+      "scroll": 1009,
+      "theme": "light",
+      "title": "Тигран · Дневник",
+      "width": 1024
+    },
+    {
+      "client": 1009,
+      "scroll": 1009,
+      "theme": "light",
+      "title": "Ереван · Дневник",
+      "width": 1024
+    },
+    {
+      "client": 1009,
+      "scroll": 1009,
+      "theme": "light",
+      "title": "Тбилиси · Дневник",
+      "width": 1024
+    },
+    {
+      "client": 1425,
+      "scroll": 1425,
+      "theme": "light",
+      "title": "Тигран · Дневник",
+      "width": 1440
+    },
+    {
+      "client": 1425,
+      "scroll": 1425,
+      "theme": "light",
+      "title": "Ереван · Дневник",
+      "width": 1440
+    },
+    {
+      "client": 1425,
+      "scroll": 1425,
+      "theme": "light",
+      "title": "Тбилиси · Дневник",
+      "width": 1440
+    }
+  ],
+  "dark": [
+    {
+      "broken": [],
+      "client": 305,
+      "scroll": 305,
+      "theme": "dark",
+      "title": "Тигран · Дневник",
+      "width": 320
+    },
+    {
+      "broken": [],
+      "client": 305,
+      "scroll": 305,
+      "theme": "dark",
+      "title": "Ереван · Дневник",
+      "width": 320
+    },
+    {
+      "broken": [],
+      "client": 305,
+      "scroll": 305,
+      "theme": "dark",
+      "title": "Тбилиси · Дневник",
+      "width": 320
+    },
+    {
+      "broken": [],
+      "client": 375,
+      "scroll": 375,
+      "theme": "dark",
+      "title": "Тигран · Дневник",
+      "width": 390
+    },
+    {
+      "broken": [],
+      "client": 375,
+      "scroll": 375,
+      "theme": "dark",
+      "title": "Ереван · Дневник",
+      "width": 390
+    },
+    {
+      "broken": [],
+      "client": 375,
+      "scroll": 375,
+      "theme": "dark",
+      "title": "Тбилиси · Дневник",
+      "width": 390
+    },
+    {
+      "broken": [],
+      "client": 753,
+      "scroll": 753,
+      "theme": "dark",
+      "title": "Тигран · Дневник",
+      "width": 768
+    },
+    {
+      "broken": [],
+      "client": 753,
+      "scroll": 753,
+      "theme": "dark",
+      "title": "Ереван · Дневник",
+      "width": 768
+    },
+    {
+      "broken": [],
+      "client": 768,
+      "scroll": 753,
+      "theme": "dark",
+      "title": "Тбилиси · Дневник",
+      "width": 768
+    },
+    {
+      "broken": [],
+      "client": 1009,
+      "scroll": 1009,
+      "theme": "dark",
+      "title": "Тигран · Дневник",
+      "width": 1024
+    },
+    {
+      "broken": [],
+      "client": 1009,
+      "scroll": 1009,
+      "theme": "dark",
+      "title": "Ереван · Дневник",
+      "width": 1024
+    },
+    {
+      "broken": [],
+      "client": 1009,
+      "scroll": 1009,
+      "theme": "dark",
+      "title": "Тбилиси · Дневник",
+      "width": 1024
+    },
+    {
+      "broken": [],
+      "client": 1425,
+      "scroll": 1425,
+      "theme": "dark",
+      "title": "Тигран · Дневник",
+      "width": 1440
+    },
+    {
+      "broken": [],
+      "client": 1425,
+      "scroll": 1425,
+      "theme": "dark",
+      "title": "Ереван · Дневник",
+      "width": 1440
+    },
+    {
+      "broken": [],
+      "client": 1425,
+      "scroll": 1425,
+      "theme": "dark",
+      "title": "Тбилиси · Дневник",
+      "width": 1440
+    }
+  ]
+}

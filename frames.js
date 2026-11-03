@@ -1,9 +1,9 @@
-/* подписи к кадрам по нажатию: повторный тап, ✕ и Escape закрывают; мелкие кадры (< 800 px) — класс .small */
+/* Подписи по нажатию; действительно небольшие исходники показываем целиком, без агрессивной обрезки. */
 (function(){
 var open=null,n=0;
 function init(){document.querySelectorAll('.tgrid figure,.tframes figure').forEach(function(f){
   var im=f.querySelector('img'),c=f.querySelector('figcaption');
-  if(im){var sz=function(){if(im.naturalWidth&&im.naturalWidth<800)f.classList.add('small')};if(im.complete)sz();else im.addEventListener('load',sz)}
+  if(im){var lowRes=/(?:^|\/)(?:a04|a05|a06|a08)\.webp(?:[?#]|$)/.test(im.getAttribute('src')||'');f.classList.toggle('small',lowRes)}
   if(!c||f.querySelector('.capT'))return;
   c.id=c.id||'fcap'+(++n);c.tabIndex=-1;c.classList.add('fcap');
   var b=document.createElement('button');b.type='button';b.className='capT';b.setAttribute('aria-expanded','false');b.setAttribute('aria-controls',c.id);
