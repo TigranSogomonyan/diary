@@ -65,4 +65,34 @@ if(board){
   document.querySelectorAll('#board .filters button').forEach(function(b){b.addEventListener('click',syncPins)});
   syncPins();
 }
+}
+/* Highlight the section currently being read without changing scroll position. */
+var navLinks=Array.prototype.slice.call(document.querySelectorAll('.diary-home .top nav a[href^="#"]'));
+if(navLinks.length){
+  var targets=navLinks.map(function(link){return{link:link,section:document.getElementById(link.getAttribute('href').slice(1))}}).filter(function(x){return x.section});
+  var queued=false;
+  function syncActiveSection(){
+    queued=false;
+    var mark=window.innerHeight*.34,found=null;
+    targets.forEach(function(x){var box=x.section.getBoundingClientRect();if(box.top<=mark&&box.bottom>mark)found=x.link});
+    targets.forEach(function(x){if(x.link===found)x.link.setAttribute('aria-current','location');else x.link.removeAttribute('aria-current')});
+  }
+  function requestSync(){if(!queued){queued=true;requestAnimationFrame(syncActiveSection)}}
+  document.addEventListener('scroll',requestSync,{passive:true});
+  window.addEventListener('resize',requestSync);
+  syncActiveSection();
+}
+/* Disable the gallery arrows at the true scroll boundaries. */
+var carousel=document.getElementById('carT');
+if(carousel){
+  var back=document.getElementById('carP'),forward=document.getElementById('carX');
+  function syncCarouselButtons(){
+    var remaining=Math.max(0,carousel.scrollWidth-carousel.clientWidth);
+    if(back)back.disabled=carousel.scrollLeft<=3;
+    if(forward)forward.disabled=remaining<=3||carousel.scrollLeft>=remaining-3;
+  }
+  carousel.addEventListener('scroll',syncCarouselButtons,{passive:true});
+  window.addEventListener('resize',syncCarouselButtons);
+  syncCarouselButtons();
+}
 })();
