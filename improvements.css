@@ -112,3 +112,91 @@
   .theme-toggle{width:34px;height:34px;font-size:20px}
 }
 @media(prefers-reduced-motion:reduce){.theme-toggle{transition:none}}
+
+/* Shared spacing and controls, including the narrowest supported screens. */
+html{scrollbar-gutter:stable;container-type:inline-size}
+body{overflow-x:clip}
+.top{align-items:center;min-height:81px}
+.top .other{display:inline-flex;align-items:center;min-height:44px}
+.theme-toggle{width:44px;height:44px}
+.menu-toggle{display:none}
+.diary-home section[id]{scroll-margin-top:calc(var(--masthead-height,81px) + 20px)}
+.diary-home .hero{padding-block:clamp(40px,5vw,72px)}
+.diary-home .hero h1{line-height:.98;letter-spacing:-.04em}
+.diary-home .hero .lead{line-height:1.3;text-wrap:pretty}
+.sec{padding-block:clamp(48px,6vw,80px)}
+.sec-h{margin-bottom:32px}
+.sec-h h2{line-height:1.06}
+.sec-h p{line-height:1.6;text-wrap:pretty}
+.btn,.filters button,.ttabs button,.dens button,.car-ctl button,.words .ctl button,.capX{min-height:44px}
+.dens button{min-width:44px;padding:10px}
+.dens{gap:0}
+.ttabs{gap:clamp(16px,3vw,32px)}
+.ttabs button{line-height:1.15}
+.car-ctl button{display:block;width:44px;flex-shrink:0}
+.car-track{padding:4px 4px 8px;margin-inline:-4px}
+.car-card h3{letter-spacing:.08em;margin-top:18px}
+.car-card u{font-size:15px;margin-top:8px}
+.shelf{gap:clamp(10px,1.5vw,20px)}
+.zine{aspect-ratio:auto;min-height:300px;padding:16px;gap:16px}
+.zine .ph{position:static;display:block;aspect-ratio:4/3;width:100%;flex:1;min-height:80px}
+.zine.empty .ph{display:grid;flex:1}
+.diary-home .zine.empty .ph span{transform:none;line-height:1.3}
+.zine .mo{line-height:1.1}
+.board{touch-action:pan-y}
+.pin{touch-action:none}
+.reader{grid-template-rows:auto minmax(0,1fr) auto}
+.r-track{min-height:0;overscroll-behavior-x:contain;touch-action:pan-x pan-y}
+.r-top button,.r-bot button{min-height:44px}
+.book{width:min(100%,1040px,calc((100dvh - 160px)*1.52));max-height:none}
+.page{min-width:0;min-height:0}
+.page.txt{line-height:1.4}
+.r-bot{padding-bottom:max(14px,env(safe-area-inset-bottom))}
+.capX{width:44px;top:0;right:0}
+.fcap{overflow-wrap:anywhere}
+/* Full bleed follows the content viewport, excluding the scrollbar gutter. */
+.fw .tgrid{margin-inline:calc((100% - 100cqw)/2)}
+.foot-r span{overflow-wrap:anywhere}
+@media(min-width:761px) and (max-width:1200px){
+  .diary-home .top{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:4px 16px}
+  .diary-home .top nav{grid-column:1/-1;grid-row:2}
+}
+@media(max-width:760px){
+  .diary-home .top{gap:8px 12px;padding-block:12px}
+  .diary-home .top .name{grid-column:1/-1;font-size:20px;line-height:1.3}
+  .diary-home .top .top-actions{grid-column:2;grid-row:2;gap:12px}
+  .diary-home .top .top-actions .other{font-size:12px}
+  .menu-toggle{display:inline-flex;align-items:center;justify-content:center;grid-column:1;grid-row:2;justify-self:start;min-height:44px;padding:0 14px;border:1px solid var(--line);background:transparent;font:400 12px var(--f-mono)}
+  .menu-toggle[aria-expanded="true"]{background:var(--ink);color:var(--paper)}
+  .diary-home .top nav{grid-row:3;flex-wrap:wrap;gap:0 24px;padding:4px 0;overflow:visible}
+  .diary-home .top nav a{display:inline-flex;align-items:center;min-height:44px;padding-block:8px}
+  .has-menu:not(.menu-open) nav{display:none}
+  .diary-home .hero{gap:32px;padding-block:36px 48px}
+  .diary-home .hero figure img{aspect-ratio:3/4}
+  .diary-home .sec{padding-block:48px}
+  .zine{min-height:260px;padding:12px;gap:12px}
+  .sec-h{gap:12px;align-items:start}
+  #board .sec-h{grid-template-columns:1fr}
+  .book{width:min(100%,calc((100dvh - 160px)/1.4));aspect-ratio:3/4.2}
+  .words .ctl{align-items:center}
+  .words .ctl button{background:rgba(0,0,0,.65)}
+}
+@media(max-width:520px){
+  .ttabs{gap:16px}
+  .ttabs button{font-size:clamp(22px,6vw,25px);white-space:nowrap}
+  .ttabs button sup{margin-left:2px}
+  .tgrid .fcap{padding:44px 8px 8px;top:0;align-content:end}
+  .tgrid .fcap b{font-size:16px}
+  .tgrid .fcap .mono{font-size:10px;letter-spacing:0}
+}
+@media(prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}
+}
+
+.seamTop .s2in img{width:100%;height:116px}
+.seamBot .s2in img{width:100%;height:98px}
+@media(max-width:760px){
+  body:not(.diary-home) .top{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:8px 12px;padding-block:12px}
+  body:not(.diary-home) .top>.mono{grid-column:1/-1;grid-row:2}
+  body:not(.diary-home) .top-actions{grid-column:2;grid-row:1}
+}

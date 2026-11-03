@@ -15,6 +15,7 @@ if(reader&&track){
     var items=Array.prototype.filter.call(reader.querySelectorAll('a[href],button:not([disabled]),[tabindex]:not([tabindex="-1"])'),function(el){return el.getClientRects().length>0});
     if(!items.length){e.preventDefault();reader.focus();return}
     var first=items[0],last=items[items.length-1];
+    if(items.indexOf(document.activeElement)===-1){e.preventDefault();(e.shiftKey?last:first).focus();return}
     if(e.shiftKey&&(document.activeElement===first||!reader.contains(document.activeElement))){e.preventDefault();last.focus()}
     else if(!e.shiftKey&&(document.activeElement===last||!reader.contains(document.activeElement))){e.preventDefault();first.focus()}
   }
@@ -57,13 +58,22 @@ if(board){
       if(!d||p.classList.contains('off'))return;
       e.preventDefault();
       var step=e.shiftKey?36:12;
-      var x=Math.max(0,Math.min(board.clientWidth-p.offsetWidth,p.offsetLeft+d[0]*step));
-      var y=Math.max(0,Math.min(board.clientHeight-p.offsetHeight,p.offsetTop+d[1]*step));
+      var x=Math.max(8,Math.min(board.clientWidth-p.offsetWidth-8,p.offsetLeft+d[0]*step));
+      var y=Math.max(8,Math.min(board.clientHeight-p.offsetHeight-8,p.offsetTop+d[1]*step));
       p.style.left=x+'px';p.style.top=y+'px';
     });
   });
   document.querySelectorAll('#board .filters button').forEach(function(b){b.addEventListener('click',syncPins)});
-  syncPins();
+  function containPins(){
+    pins.forEach(function(p){
+      var box=p.getBoundingClientRect(),mx=Math.max(8,(box.width-p.offsetWidth)/2),my=Math.max(8,(box.height-p.offsetHeight)/2);
+      p.style.left=Math.max(mx,Math.min(board.clientWidth-p.offsetWidth-mx,p.offsetLeft))+'px';
+      p.style.top=Math.max(my,Math.min(board.clientHeight-p.offsetHeight-my,p.offsetTop))+'px';
+    });
+  }
+  new ResizeObserver(containPins).observe(board);
+  board.querySelectorAll('img').forEach(function(im){im.addEventListener('load',containPins)});
+  containPins();syncPins();
 }
 /* Highlight the section currently being read without changing scroll position. */
 var navLinks=Array.prototype.slice.call(document.querySelectorAll('.diary-home .top nav a[href^="#"]'));
