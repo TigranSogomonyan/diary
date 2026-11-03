@@ -1,0 +1,29 @@
+/* Diary · editorial refinements, layered over the original design. */
+.skip-link{position:fixed;z-index:200;top:12px;left:12px;transform:translateY(-160%);padding:12px 18px;background:var(--ink);color:var(--paper);border:2px solid var(--accent);font:500 14px/1.4 var(--f-body);text-decoration:none}
+.skip-link:focus{transform:translateY(0)}
+:where(a,button,[tabindex="0"]):focus-visible{outline:2px solid var(--accent);outline-offset:4px}
+#main-content:focus{outline:none}
+:where(section[id]){scroll-margin-top:24px}
+.btn{text-decoration:none}
+.diary-home .top .other{flex-shrink:0}
+.diary-home .top nav a{transition:color .2s ease}
+.diary-home .top nav a:focus-visible{color:var(--ink)}
+.slot.about-note{display:flex;flex-direction:column;align-items:flex-start;justify-content:space-between;text-align:left;min-height:320px;padding:clamp(20px,4vw,40px);border:1px solid var(--line);background:var(--card)}
+.about-note .about-note-title{font:italic 400 clamp(46px,7vw,90px)/.9 var(--f-display);letter-spacing:-.025em;color:var(--ink)}
+.about-note .mono{color:var(--muted)}
+.reader :is(.r-top,.r-bot) button:disabled{opacity:.3;cursor:not-allowed}
+.board .pin:focus-visible{outline:3px solid var(--accent);outline-offset:4px}
+@media(max-width:760px){
+  .diary-home .top{display:grid;grid-template-columns:minmax(0,1fr) auto;align-items:center;column-gap:12px;row-gap:12px}
+  .diary-home .top .name{grid-column:1;grid-row:1;min-width:0;font-size:clamp(17px,4vw,21px)}
+  .diary-home .top .other{grid-column:2;grid-row:1;white-space:nowrap}
+  .diary-home .top nav{grid-column:1/-1;grid-row:2;display:flex;flex-wrap:nowrap;gap:20px;overflow-x:auto;overscroll-behavior-inline:contain;scroll-snap-type:x proximity;padding:2px 2px 12px;scrollbar-width:thin}
+  .diary-home .top nav a{flex:0 0 auto;white-space:nowrap;padding:7px 0;scroll-snap-align:start}
+  .diary-home .sec{padding-block:48px}
+  .diary-home .hero{gap:28px}
+  .diary-home .about-note{min-height:260px}
+}
+@media(prefers-reduced-motion:reduce){
+  .skip-link,.diary-home .top nav a{transition:none!important}
+  .diary-home .top nav{scroll-behavior:auto}
+}
